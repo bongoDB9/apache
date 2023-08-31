@@ -1,0 +1,10 @@
+---
+ - name: Add firewall configuration for Apache
+   firewalld:
+      service: http
+      permanent: yes
+      state: enabled
+ - name: Reload firewall configuration to apply settings
+   service:
+      name: firewalld
+      state: reloaded

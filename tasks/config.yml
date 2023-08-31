@@ -1,0 +1,6 @@
+---
+  - name: Setup the Apache configuration
+    template:
+        src: /etc/ansible/roles/apache/templates/index.j2
+        dest: /var/www/html/index.html
+
